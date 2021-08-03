@@ -3,4 +3,5 @@ terraform {
   required_providers {
     google = ">= 3.29.0"
   }
+
 }
