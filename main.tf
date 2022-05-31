@@ -20,7 +20,7 @@ locals {
 }
 
 module "iam" {
-  source = "git::git@github.com:Datatamer/terraform-gcp-tamr-iam?ref=v0.1.1"
+  source = "git::git@github.com:Datatamer/terraform-gcp-tamr-iam?ref=v0.1.3"
 
   project_id                = var.project_id
   tamr_service_account      = var.tamr_instance_service_account
@@ -28,7 +28,7 @@ module "iam" {
 }
 
 module "cloud_sql" {
-  source = "git::git@github.com:Datatamer/terraform-gcp-tamr-cloud-sql.git?ref=v4.6.1"
+  source = "git::git@github.com:Datatamer/terraform-gcp-tamr-cloud-sql.git?ref=v4.7.0"
   name   = var.deployment_name
 
   deletion_protection = local.deletion_protection
@@ -47,7 +47,7 @@ module "cloud_sql" {
 
 
 module "gcs_buckets" {
-  source = "git::git@github.com:Datatamer/terraform-gcp-tamr-buckets.git?ref=v2.2.0"
+  source = "git::git@github.com:Datatamer/terraform-gcp-tamr-buckets.git?ref=v2.3.0"
 
   project_id    = var.project_id
   labels        = var.labels
