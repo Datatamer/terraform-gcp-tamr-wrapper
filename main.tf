@@ -37,9 +37,6 @@ module "cloud_sql" {
   labels     = var.labels
   region     = var.region
 
-  cloud_sql_viewer_members = local.read_users
-  cloud_sql_client_members = local.admin_users
-
   disk_size = var.sql_disk_size
   disk_type = var.sql_disk_type
   tier      = var.sql_tier
