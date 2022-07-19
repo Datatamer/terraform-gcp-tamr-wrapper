@@ -25,7 +25,7 @@ output "tmpl_dataproc_config" {
   description = "dataproc config"
 }
 
-output "tmpl_statup_script" {
-  value       = module.tamr_vm.tmpl_statup_script
+output "tmpl_startup_script" {
+  value       = module.tamr_vm.tmpl_startup_script
   description = "rendered metadata startup script"
 }
