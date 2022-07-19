@@ -92,7 +92,6 @@ module "config" {
   source = "git::git@github.com:Datatamer/terraform-gcp-tamr-config.git?ref=v1.0.0"
 
   # tamr VM
-  tamr_instance_name            = var.deployment_name
   tamr_instance_zone            = var.zone
   tamr_instance_subnet          = local.subnetwork
   tamr_instance_service_account = module.iam.service_account_email
