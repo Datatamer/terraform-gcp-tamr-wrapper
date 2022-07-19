@@ -16,7 +16,7 @@ output "tamr_service_account" {
 # config files
 # NOTE: these are very useful for debugging
 output "tamr_config_file" {
-  value       = module.tamr_vm.tamr_config_file
+  value       = module.config.tamr_config_file
   description = "full tamr config file"
 }
 
