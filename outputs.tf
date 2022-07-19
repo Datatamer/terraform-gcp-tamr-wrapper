@@ -21,7 +21,7 @@ output "tamr_config_file" {
 }
 
 output "tmpl_dataproc_config" {
-  value       = module.tamr_vm.tmpl_dataproc_config
+  value       = module.config.tmpl_dataproc_config
   description = "dataproc config"
 }
 
