@@ -100,8 +100,8 @@ module "config" {
   # bigtable config
   tamr_bigtable_instance_id = module.bigtable.bigtable_instance_id
   tamr_bigtable_cluster_id  = module.bigtable.bigtable_cluster_id
-  tamr_bigtable_min_nodes   = 1
-  tamr_bigtable_max_nodes   = 60
+  tamr_bigtable_min_nodes   = var.tamr_bigtable_min_nodes
+  tamr_bigtable_max_nodes   = var.tamr_bigtable_max_nodes
   # dataproc
   tamr_dataproc_bucket = module.gcs_buckets.dataproc_bucket_name
   tamr_dataproc_region = var.region
