@@ -103,8 +103,8 @@ module "config" {
   tamr_bigtable_min_nodes   = 1
   tamr_bigtable_max_nodes   = 60
   # dataproc
-  tamr_dataproc_bucket     = module.gcs_buckets.dataproc_bucket_name
-  tamr_dataproc_region     = var.region
+  tamr_dataproc_bucket = module.gcs_buckets.dataproc_bucket_name
+  tamr_dataproc_region = var.region
   # dataproc_cluster_config
   tamr_dataproc_cluster_subnetwork_uri = local.subnetwork
   tamr_dataproc_cluster_zone           = var.zone

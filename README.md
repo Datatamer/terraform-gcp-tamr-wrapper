@@ -76,7 +76,7 @@ No provider.
 | tamr\_instance\_self\_link | full self link of created tamr vm |
 | tamr\_service\_account | service account tamr is using |
 | tmpl\_dataproc\_config | dataproc config |
-| tmpl\_statup\_script | rendered metadata startup script |
+| tmpl\_startup\_script | rendered metadata startup script |
 
 <!-- END OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
 
