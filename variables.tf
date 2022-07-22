@@ -72,7 +72,6 @@ variable "tamr_bigtable_min_nodes" {
 variable "tamr_bigtable_max_nodes" {
   type        = number
   description = "Max number of nodes to scale up to"
-  default     = 60
 }
 #
 # GCS
