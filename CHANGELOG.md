@@ -1,3 +1,6 @@
+# Tamr GCP Wrapper - v2.0.0 - July 21st 2022
+* add config module
+
 # Tamr GCP Wrapper - v1.0.0 - June 1st 2022
 * update minimum version of terraform to 1.0.0 and google provider to 4.6.0
 
