@@ -120,3 +120,10 @@ variable "force_destroy" {
   type        = bool
   description = "force destroy potentially persistent resources, like bigtable/gcs"
 }
+
+variable "private_network_id" {
+  type        = string
+  description = "The VPC network from which the Cloud SQL instance is accessible for private IP"
+  default     = ""
+}
+

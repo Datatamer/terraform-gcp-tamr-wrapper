@@ -40,6 +40,9 @@ module "cloud_sql" {
   disk_size = var.sql_disk_size
   disk_type = var.sql_disk_type
   tier      = var.sql_tier
+
+  enable_private_ip  = true
+  private_network_id = var.private_network_id
 }
 
 
