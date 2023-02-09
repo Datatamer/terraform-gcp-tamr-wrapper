@@ -73,7 +73,79 @@ variable "tamr_bigtable_max_nodes" {
   type        = number
   description = "Max number of nodes to scale up to"
 }
+
 #
+# Dataproc
+#
+variable "dataproc_cluster_master_instance_type" {
+  default     = "n1-highmem-4"
+  type        = string
+  description = "Instance type to use as dataproc master"
+}
+
+variable "dataproc_cluster_master_disk_size" {
+  default     = 1000
+  type        = number
+  description = "Size of disk to use on dataproc master disk"
+}
+
+variable "dataproc_cluster_worker_machine_type" {
+  default     = "n1-standard-16"
+  type        = string
+  description = "machine type of default worker pool"
+}
+
+variable "dataproc_cluster_worker_num_instances" {
+  default     = 4
+  type        = number
+  description = "Number of default workers to use"
+}
+
+variable "dataproc_cluster_worker_num_local_ssds" {
+  default     = 2
+  type        = number
+  description = "Number of localssds to attach to each worker node"
+}
+
+variable "dataproc_image_version" {
+  default     = "1.4"
+  type        = string
+  description = "Dataproc image version"
+}
+
+#
+# spark settings
+#
+variable "spark_driver_memory" {
+  default     = "12G"
+  type        = string
+  description = "Amount of memory spark should allocate to spark driver"
+}
+
+variable "spark_executor_memory" {
+  default     = "13G"
+  type        = string
+  description = "Amount of memory spark should allocate to each spark executor"
+}
+
+variable "spark_executor_cores" {
+  default     = 5
+  type        = number
+  description = "Amount of cores spark should allocate to each spark executor"
+}
+
+variable "spark_executor_instances" {
+  default     = 12
+  type        = number
+  description = "number of spark executor instances"
+}
+
+variable "spark_properties_override" {
+  default     = ""
+  type        = string
+  description = "json blob of spark properties to override, if not set will use a default set of properties that should work for most use cases"
+}
+
 # GCS
 #
 variable "bucket_locations" {

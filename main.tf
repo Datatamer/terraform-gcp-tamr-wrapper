@@ -89,7 +89,7 @@ module "tamr_vm" {
 }
 
 module "config" {
-  source = "git::git@github.com:Datatamer/terraform-gcp-tamr-config.git?ref=v1.0.2"
+  source = "git::git@github.com:Datatamer/terraform-gcp-tamr-config.git?ref=v2.1.0"
 
   # tamr VM
   tamr_instance_zone            = var.zone
@@ -106,8 +106,20 @@ module "config" {
   tamr_dataproc_bucket = module.gcs_buckets.dataproc_bucket_name
   tamr_dataproc_region = var.region
   # dataproc_cluster_config
-  tamr_dataproc_cluster_subnetwork_uri = local.subnetwork
-  tamr_dataproc_cluster_zone           = var.zone
+  tamr_dataproc_cluster_subnetwork_uri        = local.subnetwork
+  tamr_dataproc_cluster_zone                  = var.zone
+  tamr_dataproc_cluster_master_instance_type  = var.dataproc_cluster_master_instance_type
+  tamr_dataproc_cluster_master_disk_size      = var.dataproc_cluster_master_disk_size
+  tamr_dataproc_cluster_worker_machine_type   = var.dataproc_cluster_worker_machine_type
+  tamr_dataproc_cluster_worker_num_instances  = var.dataproc_cluster_worker_num_instances
+  tamr_dataproc_cluster_worker_num_local_ssds = var.dataproc_cluster_worker_num_local_ssds
+  tamr_dataproc_image_version                 = var.dataproc_image_version
+  # spark
+  tamr_spark_driver_memory       = var.spark_driver_memory
+  tamr_spark_executor_memory     = var.spark_executor_memory
+  tamr_spark_executor_cores      = var.spark_executor_cores
+  tamr_spark_executor_instances  = var.spark_executor_instances
+  tamr_spark_properties_override = var.spark_properties_override
   # cloud sql
   tamr_cloud_sql_location = var.region
   tamr_cloud_sql_name     = module.cloud_sql.instance_name
