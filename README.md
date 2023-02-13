@@ -43,8 +43,19 @@ No provider.
 | additional\_admin\_users | list of additional entities to give admin permissions to provisioned resources | `list(string)` | `[]` | no |
 | additional\_read\_users | list of additional entities to give read only permissions to provisioned resources | `list(string)` | `[]` | no |
 | bucket\_locations | Location for the gcs buckets, default is `US` | `string` | `"US"` | no |
+| dataproc\_cluster\_master\_disk\_size | Size of disk to use on dataproc master disk | `number` | `1000` | no |
+| dataproc\_cluster\_master\_instance\_type | Instance type to use as dataproc master | `string` | `"n1-highmem-4"` | no |
+| dataproc\_cluster\_worker\_machine\_type | machine type of default worker pool | `string` | `"n1-standard-16"` | no |
+| dataproc\_cluster\_worker\_num\_instances | Number of default workers to use | `number` | `4` | no |
+| dataproc\_cluster\_worker\_num\_local\_ssds | Number of localssds to attach to each worker node | `number` | `2` | no |
+| dataproc\_image\_version | Dataproc image version | `string` | `"1.4"` | no |
 | force\_destroy | force destroy potentially persistent resources, like bigtable/gcs | `bool` | `false` | no |
 | labels | Labels to attach to created resources | `map(string)` | `{}` | no |
+| spark\_driver\_memory | Amount of memory spark should allocate to spark driver | `string` | `"12G"` | no |
+| spark\_executor\_cores | Amount of cores spark should allocate to each spark executor | `number` | `5` | no |
+| spark\_executor\_instances | number of spark executor instances | `number` | `12` | no |
+| spark\_executor\_memory | Amount of memory spark should allocate to each spark executor | `string` | `"13G"` | no |
+| spark\_properties\_override | json blob of spark properties to override, if not set will use a default set of properties that should work for most use cases | `string` | `""` | no |
 | sql\_disk\_size | size of the disk to use on the tamr sql instance | `number` | `10` | no |
 | sql\_disk\_type | The disk type to use on the cloud SQL instance. should be either PD\_SSD or PD\_STANDARD | `string` | `"PD_SSD"` | no |
 | sql\_tier | the machine type to use for the sql instance | `string` | `"db-custom-2-4096"` | no |

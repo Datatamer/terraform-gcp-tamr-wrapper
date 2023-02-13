@@ -1,5 +1,8 @@
 # GCP Tamr Wrapper
 
+## v2.1.0 - February 9th 2023
+* exposes spark & dataproc settings from the Tamr configuration module
+
 ## v2.0.4 - August 12th 2022
 * corrects IAM module version
 
