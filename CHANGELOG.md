@@ -1,5 +1,8 @@
 # GCP Tamr Wrapper
 
+## v2.1.1 - April 4th 2023
+* uses https for source modules instead of ssh
+
 ## v2.1.0 - February 9th 2023
 * exposes spark & dataproc settings from the Tamr configuration module
 
