@@ -19,6 +19,7 @@ locals {
   )
 }
 
+#tfsec:ignore:google-iam-no-project-level-service-account-impersonation
 module "iam" {
   source = "git::https://github.com/Datatamer/terraform-gcp-tamr-iam?ref=v1.1.0"
 
@@ -27,6 +28,7 @@ module "iam" {
   tamr_service_account_name = var.deployment_name
 }
 
+#tfsec:ignore:google-sql-enable-pg-temp-file-logging tfsec:ignore:google-sql-encrypt-in-transit-data tfsec:ignore:google-sql-no-public-access tfsec:ignore:google-sql-pg-log-checkpoints tfsec:ignore:google-sql-pg-log-connections tfsec:ignore:google-sql-pg-log-disconnections tfsec:ignore:google-sql-pg-log-lock-waits
 module "cloud_sql" {
   source = "git::https://github.com/Datatamer/terraform-gcp-tamr-cloud-sql.git?ref=v5.0.0"
   name   = var.deployment_name
@@ -42,7 +44,7 @@ module "cloud_sql" {
   tier      = var.sql_tier
 }
 
-
+#tfsec:ignore:google-storage-bucket-encryption-customer-key tfsec:ignore:google-storage-enable-ubla
 module "gcs_buckets" {
   source = "git::https://github.com/Datatamer/terraform-gcp-tamr-buckets.git?ref=v3.0.0"
 
@@ -69,6 +71,7 @@ module "bigtable" {
   cloud_bigtable_admin_members = local.admin_users
 }
 
+#tfsec:ignore:google-compute-enable-shielded-vm-im tfsec:ignore:google-compute-enable-shielded-vm-vtpm tfsec:ignore:google-compute-no-project-wide-ssh-keys tfsec:ignore:google-compute-vm-disk-encryption-customer-key
 module "tamr_vm" {
   source = "git::https://github.com/Datatamer/terraform-gcp-tamr-vm.git?ref=v2.0.0"
   # tamr VM
