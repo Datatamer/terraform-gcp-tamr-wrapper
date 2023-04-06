@@ -25,7 +25,6 @@ module "iam" {
 
   project_id                = var.project_id
   tamr_service_account      = var.tamr_instance_service_account
-  tamr_service_account_name = var.deployment_name
 }
 
 #tfsec:ignore:google-sql-enable-pg-temp-file-logging tfsec:ignore:google-sql-encrypt-in-transit-data tfsec:ignore:google-sql-no-public-access tfsec:ignore:google-sql-pg-log-checkpoints tfsec:ignore:google-sql-pg-log-connections tfsec:ignore:google-sql-pg-log-disconnections tfsec:ignore:google-sql-pg-log-lock-waits
