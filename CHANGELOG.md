@@ -1,5 +1,10 @@
 # GCP Tamr Wrapper
 
+## v3.0.0 - April 6th 2023
+* Following input variables now required
+  * tamr_instance_service_account
+* Allows flexibility for the user of this module to either create a new service account or use an existing one
+
 ## v2.1.1 - April 4th 2023
 * uses https for source modules instead of ssh
 
