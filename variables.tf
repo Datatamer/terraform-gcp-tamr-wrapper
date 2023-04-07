@@ -14,7 +14,6 @@ variable "additional_read_users" {
 }
 
 variable "tamr_instance_service_account" {
-  default     = ""
   type        = string
   description = "email of service account to attach to the tamr instance. If not given will create a new service account for tamr to use."
 }

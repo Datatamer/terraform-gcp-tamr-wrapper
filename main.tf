@@ -21,11 +21,10 @@ locals {
 
 #tfsec:ignore:google-iam-no-project-level-service-account-impersonation
 module "iam" {
-  source = "git::https://github.com/Datatamer/terraform-gcp-tamr-iam?ref=v1.1.0"
+  source = "git::https://github.com/Datatamer/terraform-gcp-tamr-iam?ref=v2.0.0"
 
-  project_id                = var.project_id
-  tamr_service_account      = var.tamr_instance_service_account
-  tamr_service_account_name = var.deployment_name
+  project_id           = var.project_id
+  tamr_service_account = var.tamr_instance_service_account
 }
 
 #tfsec:ignore:google-sql-enable-pg-temp-file-logging tfsec:ignore:google-sql-encrypt-in-transit-data tfsec:ignore:google-sql-no-public-access tfsec:ignore:google-sql-pg-log-checkpoints tfsec:ignore:google-sql-pg-log-connections tfsec:ignore:google-sql-pg-log-disconnections tfsec:ignore:google-sql-pg-log-lock-waits
