@@ -21,7 +21,7 @@ locals {
 
 #tfsec:ignore:google-iam-no-project-level-service-account-impersonation
 module "iam" {
-  source = "git::https://github.com/Datatamer/terraform-gcp-tamr-iam?ref=v2.0.0"
+  source = "git::https://github.com/Datatamer/terraform-gcp-tamr-iam?ref=v2.0.1"
 
   project_id           = var.project_id
   tamr_service_account = var.tamr_instance_service_account
