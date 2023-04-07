@@ -1,5 +1,8 @@
 # GCP Tamr Wrapper
 
+## v3.0.1 - April 7th 2023
+* Use patched iam module
+
 ## v3.0.0 - April 6th 2023
 * Following input variables now required
   * tamr_instance_service_account
