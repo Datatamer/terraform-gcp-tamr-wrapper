@@ -92,7 +92,7 @@ module "tamr_vm" {
 }
 
 module "config" {
-  source = "git::https://github.com/Datatamer/terraform-gcp-tamr-config.git?ref=v2.1.0"
+  source = "git::https://github.com/Datatamer/terraform-gcp-tamr-config.git?ref=v2.2.0"
 
   # tamr VM
   tamr_instance_zone            = var.zone
@@ -106,8 +106,9 @@ module "config" {
   tamr_bigtable_min_nodes   = var.tamr_bigtable_min_nodes
   tamr_bigtable_max_nodes   = var.tamr_bigtable_max_nodes
   # dataproc
-  tamr_dataproc_bucket = module.gcs_buckets.dataproc_bucket_name
-  tamr_dataproc_region = var.region
+  tamr_dataproc_bucket       = module.gcs_buckets.dataproc_bucket_name
+  tamr_dataproc_region       = var.region
+  tamr_dataproc_network_tags = var.dataproc_network_tags
   # dataproc_cluster_config
   tamr_dataproc_cluster_subnetwork_uri        = local.subnetwork
   tamr_dataproc_cluster_zone                  = var.zone

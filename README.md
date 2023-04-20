@@ -50,6 +50,7 @@ No provider.
 | dataproc\_cluster\_worker\_num\_instances | Number of default workers to use | `number` | `4` | no |
 | dataproc\_cluster\_worker\_num\_local\_ssds | Number of localssds to attach to each worker node | `number` | `2` | no |
 | dataproc\_image\_version | Dataproc image version | `string` | `"1.4"` | no |
+| dataproc\_network\_tags | list of network tags to attach to each dataproc node | `list(string)` | `[]` | no |
 | force\_destroy | force destroy potentially persistent resources, like bigtable/gcs | `bool` | `false` | no |
 | labels | Labels to attach to created resources | `map(string)` | `{}` | no |
 | spark\_driver\_memory | Amount of memory spark should allocate to spark driver | `string` | `"12G"` | no |
@@ -61,6 +62,7 @@ No provider.
 | sql\_disk\_type | The disk type to use on the cloud SQL instance. should be either PD\_SSD or PD\_STANDARD | `string` | `"PD_SSD"` | no |
 | sql\_tier | the machine type to use for the sql instance | `string` | `"db-custom-2-4096"` | no |
 | tamr\_bigtable\_min\_nodes | Min number of nodes to scale down to | `number` | `1` | no |
+| tamr\_instance\_tags | list of network tags to attach to instance | `list(string)` | `[]` | no |
 
 ## Outputs
 

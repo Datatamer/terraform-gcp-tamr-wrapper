@@ -82,6 +82,11 @@ variable "tamr_bigtable_max_nodes" {
 #
 # Dataproc
 #
+variable "dataproc_network_tags" {
+  default     = []
+  type        = list(string)
+  description = "list of network tags to attach to each dataproc node"
+}
 variable "dataproc_cluster_master_instance_type" {
   default     = "n1-highmem-4"
   type        = string

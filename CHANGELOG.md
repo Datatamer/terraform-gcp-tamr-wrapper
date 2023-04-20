@@ -3,7 +3,8 @@
 ## v3.1.0 - April 20th 2023
 * Following optional input variables now available
   * tamr_instance_tags
-* Allows flexibility for the user of this module to supply network tags to tamr_vm module
+  * dataproc_network_tags
+* Allows flexibility for the user of this module to supply network tags to tamr_vm module and dataproc node
 
 ## v3.0.1 - April 7th 2023
 * Use patched iam module
