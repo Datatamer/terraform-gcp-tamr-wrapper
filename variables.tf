@@ -30,6 +30,12 @@ variable "tamr_zip_uri" {
   type        = string
   description = "gcs location to download tamr zip from"
 }
+
+variable "tamr_instance_tags" {
+  default     = []
+  type        = list(string)
+  description = "list of network tags to attach to instance"
+}
 # TODO: vm settings
 
 
