@@ -1,5 +1,8 @@
 # GCP Tamr Wrapper
 
+## v3.1.1 - April 21st 2023
+* Use patched config module
+
 ## v3.1.0 - April 20th 2023
 * Following optional input variables now available
   * tamr_instance_tags
