@@ -30,6 +30,12 @@ variable "tamr_zip_uri" {
   type        = string
   description = "gcs location to download tamr zip from"
 }
+
+variable "tamr_instance_tags" {
+  default     = []
+  type        = list(string)
+  description = "list of network tags to attach to instance"
+}
 # TODO: vm settings
 
 
@@ -76,6 +82,11 @@ variable "tamr_bigtable_max_nodes" {
 #
 # Dataproc
 #
+variable "dataproc_network_tags" {
+  default     = []
+  type        = list(string)
+  description = "list of network tags to attach to each dataproc node"
+}
 variable "dataproc_cluster_master_instance_type" {
   default     = "n1-highmem-4"
   type        = string
