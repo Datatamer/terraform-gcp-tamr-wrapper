@@ -36,6 +36,12 @@ variable "tamr_instance_tags" {
   type        = list(string)
   description = "list of network tags to attach to instance"
 }
+
+variable "tamr_instance_metadata" {
+  default     = {}
+  type        = map(string)
+  description = "custom metadata to attach to created VM"
+}
 # TODO: vm settings
 
 
