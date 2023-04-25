@@ -1,5 +1,10 @@
 # GCP Tamr Wrapper
 
+## v3.2.0 - April 25th 2023
+* Following optional input variables now available
+  * tamr_license_key
+* Allows flexibility for the user of this module to supply a Tamr license key
+
 ## v3.1.1 - April 21st 2023
 * Use patched config module
 

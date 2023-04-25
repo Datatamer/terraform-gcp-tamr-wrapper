@@ -130,4 +130,6 @@ module "config" {
   tamr_sql_password       = module.cloud_sql.tamr_password
   # filesystem
   tamr_filesystem_bucket = module.gcs_buckets.tamr_bucket_name
+  # Miscellaneous
+  tamr_license_key = var.tamr_license_key
 }
