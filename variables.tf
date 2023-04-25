@@ -202,3 +202,9 @@ variable "force_destroy" {
   type        = bool
   description = "force destroy potentially persistent resources, like bigtable/gcs"
 }
+
+variable "tamr_license_key" {
+  default     = ""
+  type        = string
+  description = "Set a tamr license key"
+}
