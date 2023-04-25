@@ -89,7 +89,7 @@ module "tamr_vm" {
   tamr_config_file = module.config.tamr_config_file
   # misc
   labels   = var.labels
-  metadata = var.tamr_instance_tags
+  metadata = var.tamr_instance_metadata
 }
 
 module "config" {
