@@ -1,6 +1,6 @@
 # GCP Tamr Wrapper
 
-## v3.3.0 - April 25th 2023
+## v3.3.0 - April 26th 2023
 * Following optional input variables now available
   * tamr_instance_metadata
 * Allows flexibility for the user of this module to supply custom metadata for Tamr VM
