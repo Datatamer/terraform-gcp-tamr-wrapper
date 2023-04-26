@@ -62,6 +62,7 @@ No provider.
 | sql\_disk\_type | The disk type to use on the cloud SQL instance. should be either PD\_SSD or PD\_STANDARD | `string` | `"PD_SSD"` | no |
 | sql\_tier | the machine type to use for the sql instance | `string` | `"db-custom-2-4096"` | no |
 | tamr\_bigtable\_min\_nodes | Min number of nodes to scale down to | `number` | `1` | no |
+| tamr\_instance\_metadata | custom metadata to attach to created VM | `map(string)` | `{}` | no |
 | tamr\_instance\_tags | list of network tags to attach to instance | `list(string)` | `[]` | no |
 | tamr\_license\_key | Set a tamr license key | `string` | `""` | no |
 
