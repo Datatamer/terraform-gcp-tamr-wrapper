@@ -51,8 +51,10 @@ No provider.
 | dataproc\_cluster\_worker\_num\_local\_ssds | Number of localssds to attach to each worker node | `number` | `2` | no |
 | dataproc\_image\_version | Dataproc image version | `string` | `"1.4"` | no |
 | dataproc\_network\_tags | list of network tags to attach to each dataproc node | `list(string)` | `[]` | no |
+| enable\_cloud\_sql\_private\_ip | Whether the Cloud SQL instance should use a public or private ip address | `bool` | `false` | no |
 | force\_destroy | force destroy potentially persistent resources, like bigtable/gcs | `bool` | `false` | no |
 | labels | Labels to attach to created resources | `map(string)` | `{}` | no |
+| private\_network\_id | The VPC network from which the Cloud SQL instance is accessible for private IP | `string` | `""` | no |
 | spark\_driver\_memory | Amount of memory spark should allocate to spark driver | `string` | `"12G"` | no |
 | spark\_executor\_cores | Amount of cores spark should allocate to each spark executor | `number` | `5` | no |
 | spark\_executor\_instances | number of spark executor instances | `number` | `12` | no |

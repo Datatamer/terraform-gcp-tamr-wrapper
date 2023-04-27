@@ -41,6 +41,10 @@ module "cloud_sql" {
   disk_size = var.sql_disk_size
   disk_type = var.sql_disk_type
   tier      = var.sql_tier
+
+  enable_private_ip  = var.enable_cloud_sql_private_ip
+  private_network_id = var.private_network_id
+
 }
 
 #tfsec:ignore:google-storage-bucket-encryption-customer-key tfsec:ignore:google-storage-enable-ubla

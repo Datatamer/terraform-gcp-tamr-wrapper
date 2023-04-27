@@ -71,6 +71,18 @@ variable "sql_disk_type" {
   default     = "PD_SSD"
 }
 
+variable "enable_cloud_sql_private_ip" {
+  type        = bool
+  description = "Whether the Cloud SQL instance should use a public or private ip address"
+  default     = false
+}
+
+variable "private_network_id" {
+  type        = string
+  description = "The VPC network from which the Cloud SQL instance is accessible for private IP"
+  default     = ""
+}
+
 #
 # Bigtable
 #
