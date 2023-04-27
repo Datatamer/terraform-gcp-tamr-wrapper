@@ -1,5 +1,11 @@
 # GCP Tamr Wrapper
 
+## v3.4.0 - April 27th 2023
+* Following optional input variables now available
+  * enable_cloud_sql_private_ip
+  * private_network_id
+* Allows flexibility for the user of this module to set private IP for c
+
 ## v3.3.0 - April 26th 2023
 * Following optional input variables now available
   * tamr_instance_metadata
