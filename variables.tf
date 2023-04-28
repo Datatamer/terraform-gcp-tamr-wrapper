@@ -136,7 +136,7 @@ variable "dataproc_cluster_worker_num_local_ssds" {
 }
 
 variable "dataproc_image_version" {
-  default     = "1.4"
+  default     = "2.0"
   type        = string
   description = "Dataproc image version"
 }

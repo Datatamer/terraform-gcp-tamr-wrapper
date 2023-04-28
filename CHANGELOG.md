@@ -1,5 +1,10 @@
 # GCP Tamr Wrapper
 
+## v4.0.0 - April 28th 2023
+* Following optional input variables have updated defaults
+  * tamr_dataproc_image_version
+* update dataproc image to use image version with Spark 3
+
 ## v3.4.0 - April 27th 2023
 * Following optional input variables now available
   * enable_cloud_sql_private_ip
