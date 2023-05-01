@@ -54,6 +54,7 @@ No provider.
 | enable\_cloud\_sql\_private\_ip | Whether the Cloud SQL instance should use a public or private ip address | `bool` | `false` | no |
 | force\_destroy | force destroy potentially persistent resources, like bigtable/gcs | `bool` | `false` | no |
 | labels | Labels to attach to created resources | `map(string)` | `{}` | no |
+| pre\_start\_script\_content | custom script to run prior to startup\_script | `string` | `""` | no |
 | private\_network\_id | The VPC network from which the Cloud SQL instance is accessible for private IP | `string` | `""` | no |
 | spark\_driver\_memory | Amount of memory spark should allocate to spark driver | `string` | `"12G"` | no |
 | spark\_executor\_cores | Amount of cores spark should allocate to each spark executor | `number` | `5` | no |

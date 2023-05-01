@@ -42,6 +42,13 @@ variable "tamr_instance_metadata" {
   type        = map(string)
   description = "custom metadata to attach to created VM"
 }
+
+variable "pre_start_script_content" {
+  default     = ""
+  type        = string
+  description = "custom script to run prior to startup_script"
+}
+
 # TODO: vm settings
 
 
