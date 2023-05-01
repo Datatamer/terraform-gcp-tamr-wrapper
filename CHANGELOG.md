@@ -1,5 +1,8 @@
 # GCP Tamr Wrapper
 
+## v3.4.1 - April 28th 2023
+* Use pathed Tamr VM module
+
 ## v3.4.0 - April 27th 2023
 * Following optional input variables now available
   * enable_cloud_sql_private_ip
