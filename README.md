@@ -49,7 +49,7 @@ No provider.
 | dataproc\_cluster\_worker\_machine\_type | machine type of default worker pool | `string` | `"n1-standard-16"` | no |
 | dataproc\_cluster\_worker\_num\_instances | Number of default workers to use | `number` | `4` | no |
 | dataproc\_cluster\_worker\_num\_local\_ssds | Number of localssds to attach to each worker node | `number` | `2` | no |
-| dataproc\_image\_version | Dataproc image version | `string` | `"1.4"` | no |
+| dataproc\_image\_version | Dataproc image version | `string` | `"2.0"` | no |
 | dataproc\_network\_tags | list of network tags to attach to each dataproc node | `list(string)` | `[]` | no |
 | enable\_cloud\_sql\_private\_ip | Whether the Cloud SQL instance should use a public or private ip address | `bool` | `false` | no |
 | force\_destroy | force destroy potentially persistent resources, like bigtable/gcs | `bool` | `false` | no |
