@@ -92,9 +92,9 @@ module "tamr_vm" {
   # config
   tamr_config_file = module.config.tamr_config_file
   # misc
-  labels                   = var.labels
-  metadata                 = var.tamr_instance_metadata
-  pre_start_script_content = var.pre_start_script_content
+  labels           = var.labels
+  metadata         = var.tamr_instance_metadata
+  pre_install_bash = var.pre_install_bash
 }
 
 module "config" {

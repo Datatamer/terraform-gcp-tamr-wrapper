@@ -2,7 +2,7 @@
 
 ## v4.1.0 - May 1st 2023
 * Following optional input variables now available
-  * pre_start_script_content
+  * make terraform/docs
 * Allow users to supply custom script to prepare VM
 
 ## v4.0.0 - April 28th 2023

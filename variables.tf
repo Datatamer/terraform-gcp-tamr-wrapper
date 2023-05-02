@@ -43,10 +43,14 @@ variable "tamr_instance_metadata" {
   description = "custom metadata to attach to created VM"
 }
 
-variable "pre_start_script_content" {
+variable "pre_install_bash" {
   default     = ""
   type        = string
-  description = "custom script to run prior to startup_script"
+  description = <<EOF
+  Bash to be run before Tamr is installed.
+  Likely to be used to meet Tamr's prerequisites, if not already met by the image. (https://docs.tamr.com/new/docs/requirements )
+   This will only be run once before Tamr is installed, unless Tamr fails to install. This bash will also be run on subsequent attempts to install Tamr, so it is recommended that this bash is idempotent.
+  EOF
 }
 
 # TODO: vm settings

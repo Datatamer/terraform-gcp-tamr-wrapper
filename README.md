@@ -54,7 +54,7 @@ No provider.
 | enable\_cloud\_sql\_private\_ip | Whether the Cloud SQL instance should use a public or private ip address | `bool` | `false` | no |
 | force\_destroy | force destroy potentially persistent resources, like bigtable/gcs | `bool` | `false` | no |
 | labels | Labels to attach to created resources | `map(string)` | `{}` | no |
-| pre\_start\_script\_content | custom script to run prior to startup\_script | `string` | `""` | no |
+| pre\_install\_bash | Bash to be run before Tamr is installed.<br>  Likely to be used to meet Tamr's prerequisites, if not already met by the image. (https://docs.tamr.com/new/docs/requirements )<br>   This will only be run once before Tamr is installed, unless Tamr fails to install. This bash will also be run on subsequent attempts to install Tamr, so it is recommended that this bash is idempotent. | `string` | `""` | no |
 | private\_network\_id | The VPC network from which the Cloud SQL instance is accessible for private IP | `string` | `""` | no |
 | spark\_driver\_memory | Amount of memory spark should allocate to spark driver | `string` | `"12G"` | no |
 | spark\_executor\_cores | Amount of cores spark should allocate to each spark executor | `number` | `5` | no |
