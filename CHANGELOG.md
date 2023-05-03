@@ -1,5 +1,8 @@
 # GCP Tamr Wrapper
 
+## v4.1.1 - May 3rd 2023
+* Use pathed Tamr VM module
+
 ## v4.1.0 - May 1st 2023
 * Following optional input variables now available
   * make terraform/docs
