@@ -76,7 +76,7 @@ module "bigtable" {
 
 #tfsec:ignore:google-compute-enable-shielded-vm-im tfsec:ignore:google-compute-enable-shielded-vm-vtpm tfsec:ignore:google-compute-no-project-wide-ssh-keys tfsec:ignore:google-compute-vm-disk-encryption-customer-key
 module "tamr_vm" {
-  source = "git::https://github.com/Datatamer/terraform-gcp-tamr-vm.git?ref=v2.2.0"
+  source = "git::https://github.com/Datatamer/terraform-gcp-tamr-vm.git?ref=v2.2.1"
   # tamr VM
   tamr_instance_name                = var.deployment_name
   tamr_instance_zone                = var.zone
