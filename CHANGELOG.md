@@ -1,5 +1,11 @@
 # GCP Tamr Wrapper
 
+## v4.2.0 - June 16th 2023
+* Following optional input variables now available
+  * tamr_instance_disk_type
+  * tamr_instance_disk_size
+* Allow users to supply custom disk type and size to tamr_vm module
+
 ## v4.1.1 - May 3rd 2023
 * Use pathed Tamr VM module
 
