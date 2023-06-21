@@ -95,6 +95,9 @@ module "tamr_vm" {
   labels           = var.labels
   metadata         = var.tamr_instance_metadata
   pre_install_bash = var.pre_install_bash
+  # boot disk
+  tamr_instance_disk_size = var.tamr_instance_disk_size
+  tamr_instance_disk_type = var.tamr_instance_disk_type
 }
 
 module "config" {

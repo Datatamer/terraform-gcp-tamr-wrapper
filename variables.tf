@@ -237,3 +237,15 @@ variable "tamr_license_key" {
   type        = string
   description = "Set a tamr license key"
 }
+
+variable "tamr_instance_disk_type" {
+  default     = "pd-ssd"
+  type        = string
+  description = "boot disk type"
+}
+
+variable "tamr_instance_disk_size" {
+  default     = 100
+  type        = number
+  description = "size of the boot disk"
+}
