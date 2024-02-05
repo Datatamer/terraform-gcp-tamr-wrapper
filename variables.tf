@@ -94,6 +94,24 @@ variable "private_network_id" {
   default     = ""
 }
 
+variable "require_ssl" {
+  type        = bool
+  description = "Set if SSL is required for the Cloud SQL instance."
+  default     = false
+}
+
+variable "ssl_mode" {
+  type        = string
+  description = "Set up the SSL mode. If SSL is required, this value is TRUSTED_CLIENT_CERTIFICATE_REQUIRED."
+  default     = "ALLOW_UNENCRYPTED_AND_ENCRYPTED"
+}
+
+variable "tamr_cloud_sql_sslmode" {
+  type        = string
+  default     = "disable"
+  description = "if ssl is disabled or not.Possible values include disable , allow , prefer , require , verify-ca and verify-full"
+}
+
 #
 # Bigtable
 #
