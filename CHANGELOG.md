@@ -1,6 +1,6 @@
 # GCP Tamr Wrapper
 
-## v4.3.0 - February 5th 2023
+## v4.2.1 - February 5th 2023
 * Add variables of SSL for Cloud SQL
   * require_ssl
   * ssl_mode
