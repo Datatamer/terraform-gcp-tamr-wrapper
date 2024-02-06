@@ -1,5 +1,12 @@
 # GCP Tamr Wrapper
 
+## v4.3.0 - February 5th 2023
+* Add variables of SSL for Cloud SQL
+  * require_ssl
+  * ssl_mode
+* Add variable of sslmode for tamr_config.yaml.tmpl
+  * tamr_cloud_sql_sslmode
+
 ## v4.2.0 - June 16th 2023
 * Following optional input variables now available
   * tamr_instance_disk_type

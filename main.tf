@@ -29,7 +29,7 @@ module "iam" {
 
 #tfsec:ignore:google-sql-enable-pg-temp-file-logging tfsec:ignore:google-sql-encrypt-in-transit-data tfsec:ignore:google-sql-no-public-access tfsec:ignore:google-sql-pg-log-checkpoints tfsec:ignore:google-sql-pg-log-connections tfsec:ignore:google-sql-pg-log-disconnections tfsec:ignore:google-sql-pg-log-lock-waits
 module "cloud_sql" {
-  source = "git::https://github.com/Datatamer/terraform-gcp-tamr-cloud-sql.git?ref=v5.0.0"
+  source = "git::https://github.com/Datatamer/terraform-gcp-tamr-cloud-sql.git?ref=v5.2.0"
   name   = var.deployment_name
 
   deletion_protection = local.deletion_protection
@@ -45,6 +45,8 @@ module "cloud_sql" {
   enable_private_ip  = var.enable_cloud_sql_private_ip
   private_network_id = var.private_network_id
 
+  require_ssl = var.require_ssl
+  ssl_mode    = var.ssl_mode
 }
 
 #tfsec:ignore:google-storage-bucket-encryption-customer-key tfsec:ignore:google-storage-enable-ubla
@@ -101,7 +103,7 @@ module "tamr_vm" {
 }
 
 module "config" {
-  source = "git::https://github.com/Datatamer/terraform-gcp-tamr-config.git?ref=v2.2.1"
+  source = "git::https://github.com/Datatamer/terraform-gcp-tamr-config.git?ref=v3.1.0"
 
   # tamr VM
   tamr_instance_zone            = var.zone
@@ -137,6 +139,7 @@ module "config" {
   tamr_cloud_sql_location = var.region
   tamr_cloud_sql_name     = module.cloud_sql.instance_name
   tamr_sql_password       = module.cloud_sql.tamr_password
+  tamr_cloud_sql_sslmode  = var.tamr_cloud_sql_sslmode
   # filesystem
   tamr_filesystem_bucket = module.gcs_buckets.tamr_bucket_name
   # Miscellaneous
