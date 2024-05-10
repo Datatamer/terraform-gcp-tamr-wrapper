@@ -63,6 +63,7 @@ No provider.
 | spark\_properties\_override | json blob of spark properties to override, if not set will use a default set of properties that should work for most use cases | `string` | `""` | no |
 | sql\_disk\_size | size of the disk to use on the tamr sql instance | `number` | `10` | no |
 | sql\_disk\_type | The disk type to use on the cloud SQL instance. should be either PD\_SSD or PD\_STANDARD | `string` | `"PD_SSD"` | no |
+| sql\_pg\_version | version of postgres to use on the tamr sql instance | `string` | `"POSTGRES_12"` | no |
 | sql\_tier | the machine type to use for the sql instance | `string` | `"db-custom-2-4096"` | no |
 | tamr\_bigtable\_min\_nodes | Min number of nodes to scale down to | `number` | `1` | no |
 | tamr\_instance\_disk\_size | size of the boot disk | `number` | `100` | no |

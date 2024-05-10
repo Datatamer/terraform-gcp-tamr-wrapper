@@ -267,3 +267,9 @@ variable "tamr_instance_disk_size" {
   type        = number
   description = "size of the boot disk"
 }
+
+variable "sql_pg_version" {
+  default     = "POSTGRES_12"
+  type        = string
+  description = "version of postgres to use on CloudSQL instance"
+}

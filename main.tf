@@ -44,6 +44,7 @@ module "cloud_sql" {
 
   enable_private_ip  = var.enable_cloud_sql_private_ip
   private_network_id = var.private_network_id
+  postgres_verion    = var.sql_pg_version
 
   require_ssl = var.require_ssl
   ssl_mode    = var.ssl_mode
