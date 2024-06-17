@@ -15,7 +15,7 @@ No providers.
 | Name | Source | Version |
 |------|--------|---------|
 | <a name="module_bigtable"></a> [bigtable](#module\_bigtable) | git::https://github.com/Datatamer/terraform-gcp-bigtable.git | v3.0.0 |
-| <a name="module_cloud_sql"></a> [cloud\_sql](#module\_cloud\_sql) | git::https://github.com/Datatamer/terraform-gcp-tamr-cloud-sql.git | v5.5.0 |
+| <a name="module_cloud_sql"></a> [cloud\_sql](#module\_cloud\_sql) | git::https://github.com/Datatamer/terraform-gcp-tamr-cloud-sql.git | v6.1.0 |
 | <a name="module_config"></a> [config](#module\_config) | git::https://github.com/Datatamer/terraform-gcp-tamr-config.git | v3.0.1 |
 | <a name="module_gcs_buckets"></a> [gcs\_buckets](#module\_gcs\_buckets) | git::https://github.com/Datatamer/terraform-gcp-tamr-buckets.git | v3.0.0 |
 | <a name="module_iam"></a> [iam](#module\_iam) | git::https://github.com/Datatamer/terraform-gcp-tamr-iam | v2.0.1 |
