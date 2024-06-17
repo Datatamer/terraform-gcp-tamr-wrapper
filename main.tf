@@ -29,7 +29,7 @@ module "iam" {
 
 #tfsec:ignore:google-sql-enable-pg-temp-file-logging tfsec:ignore:google-sql-encrypt-in-transit-data tfsec:ignore:google-sql-no-public-access tfsec:ignore:google-sql-pg-log-checkpoints tfsec:ignore:google-sql-pg-log-connections tfsec:ignore:google-sql-pg-log-disconnections tfsec:ignore:google-sql-pg-log-lock-waits
 module "cloud_sql" {
-  source = "git::https://github.com/Datatamer/terraform-gcp-tamr-cloud-sql.git?ref=v5.5.0"
+  source = "git::https://github.com/Datatamer/terraform-gcp-tamr-cloud-sql.git?ref=v6.1.0"
   name   = var.deployment_name
 
   deletion_protection = local.deletion_protection
@@ -44,6 +44,7 @@ module "cloud_sql" {
 
   enable_private_ip  = var.enable_cloud_sql_private_ip
   private_network_id = var.private_network_id
+  postgres_verion    = var.sql_pg_version
 
   require_ssl = var.require_ssl
   ssl_mode    = var.ssl_mode
